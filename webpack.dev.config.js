@@ -7,7 +7,7 @@ module.exports = {
 	mode: 'development',
 	target: 'web',
 	entry: {
-		app: ['./src/assets/index.css', './src/app.js'],
+		app: ['./src/assets/index.css', './src/index.js'],
 		vendor: ['react', 'react-dom', 'react-router-dom']
 	},
 	output: {
