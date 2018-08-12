@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.dev.config.js --progress",
+    "start": "(npm run server & npm run build)",
+    "build": "webpack-dev-server --config ./webpack.dev.config.js --progress",
     "server": "npx json-server tabs.json --static ./src/components/tabs"
   },
   "keywords": [],
