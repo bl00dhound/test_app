@@ -4,7 +4,6 @@ import { sort, ifElse, test, find, propEq, compose, __ } from 'ramda';
 
 import Dashboard from './dashboard';
 import Wrapper from './wrapper';
-import { TabPane } from '../../node_modules/semantic-ui-react';
 
 class Home extends React.Component {
 
@@ -66,10 +65,10 @@ class Home extends React.Component {
 
 	render() {
 		return (
-			<React.Fragment>
-				<Route path={'/'} component={() => <Dashboard {...this.state} clickHandler={this.clickHandler}/>} />
-				<Wrapper {...this.state}/>
-			</React.Fragment>
+			<div className='homepage'>
+				<Dashboard {...this.state} clickHandler={this.clickHandler} />
+				<Wrapper {...this.state} className='content'/>
+			</div>
 		);
 	}
 }

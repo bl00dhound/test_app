@@ -1,9 +1,10 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import './wrapper.css';
 
-const Wrapper = ({ CurrentComponent }) => {
-	if (typeof CurrentComponent === 'function') return <CurrentComponent />;
-	else return <div>Empty</div>;
-}
+const Wrapper = ({ CurrentComponent }) => (
+	<div className='content'>
+		{typeof CurrentComponent === 'function' ? <CurrentComponent /> : ''}
+	</div>
+)
 
 export default Wrapper;
